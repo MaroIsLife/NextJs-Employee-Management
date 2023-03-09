@@ -1,0 +1,19 @@
+[{
+	"id": 1,
+	"name": "Alisson",
+	"email": "Allison@gmail.com",
+	"avatar": "https://repairkopitiam.sg/wp-content/themes/cera-child/assets/images/avatars/user-avatar.png",
+	"salary": "1000",
+	"date": "2017-01-01",
+	"status": true
+
+},
+{
+	"id": 2,
+	"name": "Marouane",
+	"email": "Marouane@gmail.com",
+	"avatar": "https://repairkopitiam.sg/wp-content/themes/cera-child/assets/images/avatars/user-avatar.png",
+	"salary": "2000",
+	"date": "2017-01-01",
+	"status": false
+}]
