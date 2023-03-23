@@ -22,9 +22,9 @@ export const setUsers = async (user) =>
 	return response
 }
 
-export const updateUsers = async (user) =>
+export const updateUsers = async (userId, formData) =>
 {
-	const response = await axios.put(`${BASE_URL}/api/users`, user);
+	const response = await axios.put(`${BASE_URL}/api/users/${userId}`, formData);
 	return response
 }
 

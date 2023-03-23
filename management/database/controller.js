@@ -67,11 +67,17 @@ export async function updateUsers(req, res) {
 		const {userId} = req.query;
 		if (userId && req.body)
 		{
-			await Users.findByIdAndUpdate(userId, req.body);
+			console.log("userBody ", req.body.data);
+			console.log("userId ", userId);
+
+			const users = await Users.findByIdAndUpdate(userId, req.body);
+			console.log("users ", users)
 			return res.status(202).json({ message: "User Updated" })
 		}
 		else
+		{
 			throw new Error();
+		}
 	}
 
 	catch (err) 

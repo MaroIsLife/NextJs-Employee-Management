@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.3",
     "autoprefixer": "^10.4.13",
+    "cors": "^2.8.5",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
     "next": "13.2.3",
@@ -17,7 +19,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
-    "react-query": "^3.39.3"
+    "react-query": "^3.39.3",
+    "react-redux": "^8.0.5"
   },
   "devDependencies": {
     "mongoose": "^7.0.0",

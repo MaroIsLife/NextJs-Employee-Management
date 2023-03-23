@@ -4,6 +4,7 @@ import {getUsers, setUsers, updateUsers} from '../../../database/controller'
 
 export default async function handler(req, res) {
 
+	console.log("Made to normal handler")
 	connectMongo();
 	if (req.method == "GET")
 		getUsers(req, res);
