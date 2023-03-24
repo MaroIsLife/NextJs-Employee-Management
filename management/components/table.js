@@ -2,14 +2,16 @@
 import { BsPersonFillGear, BsFillTrashFill } from 'react-icons/bs'
 import { AiFillEdit } from 'react-icons/ai'
 import { FiEdit } from 'react-icons/fi'
+import axios from 'axios'
 //import Data from '../database/data.json'
-import {getUsers} from '../lib/helper'
+import {getUsers, deleteUsers} from '../lib/helper'
 import {useQuery} from 'react-query'
 import { useSelector , useDispatch} from 'react-redux'
-import {toggleChangeAction, updateAction} from '../redux/reducer'
+import {toggleChangeAction, updateAction, deleteAction} from '../redux/reducer'
 const Tr = ({_id, name, avatar, email, salary, date, status}) =>
 {
 	const visible = useSelector(state => state.app.client.toggleForm);
+	const deleteId = useSelector(state => state.app.client.deleteId);
 	const dispatch = useDispatch();
 
 	const onUpdate = () =>
@@ -20,6 +22,16 @@ const Tr = ({_id, name, avatar, email, salary, date, status}) =>
 		{
 			console.log("id ", _id);
 			dispatch(updateAction(_id));
+		}
+	}
+
+	const onDelete = async () =>
+	{
+
+		if (!visible) 
+		{
+			await deleteUsers(_id);
+			dispatch(deleteAction(_id))
 		}
 	}
 
@@ -47,7 +59,7 @@ const Tr = ({_id, name, avatar, email, salary, date, status}) =>
 		
 			<button onClick={onUpdate}><FiEdit size={25} color={"rgb(34,197,94)"}></FiEdit></button>
 			<span>  </span>
-			<button onClick={onUpdate}><BsFillTrashFill size={25} color={"red"}></BsFillTrashFill></button>
+			<button onClick={onDelete}><BsFillTrashFill size={25} color={"red"}></BsFillTrashFill></button>
 		</td>
 	</tr>);
 }

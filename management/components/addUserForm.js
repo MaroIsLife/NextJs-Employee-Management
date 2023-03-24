@@ -26,7 +26,7 @@ export default function AddUserForm({formData, setFormData}) {
 		console.log("FormData ", formData);
 		const model = {
 			name: `${firstname} ${lastname}`,
-			avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 10)}.jpg`,
+			avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg`,
 			email,
 			salary,
 			date,
