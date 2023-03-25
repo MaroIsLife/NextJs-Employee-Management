@@ -44,7 +44,7 @@ export default function Home() {
 	  <h1 className='text-xl md:text-5xl text-center font-bold py-10'>Employee Management</h1>
 	  <div className='container mx-auto flex justify-between py-5 border-b'>
 	  <div className="left flex gap-3">
-		<button onClick={handler} className='flex bg-indigo-500 text-white px-4 py-2 border rounded-md hover:bg-indigo-700 hover:text-zinc-700'>Add Employee <BsPersonFillAdd size={19} /></button>
+		<button onClick={handler} className='flex bg-teal-500 text-white px-4 py-2 border rounded-md hover:bg-teal-700 hover:text-zinc-700'>Add Employee <BsPersonFillAdd size={19} /></button>
 
 	  </div>
 			{deleteId ? DeleteComponent({ deletehandler, canclehandler }) : <></>}

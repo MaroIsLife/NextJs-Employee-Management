@@ -73,7 +73,7 @@ export default function Table  () {
 
 
 	if (isLoading || !data) {
-		return <div className='m-auto bg-red-600 text-white'>Loading...</div>
+		return <div className='m-auto bg-teal-400 text-white align-middle'>Loading...</div>
 	}
 	if (isError)
 		return <div>Error {error}</div>
