@@ -1,15 +1,15 @@
 import { useRouter } from 'next/router';
 import connectMongo from '../../../database/conn'
 import {getUser, deleteUsers, setUsers, updateUsers } from '../../../database/controller'
-import Cors from 'cors'
+//import Cors from 'cors'
 
 
-const cors = Cors({
-	"origin": "https://localhost:3000",
-	"methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-	"preflightContinue": false,
-	"optionsSuccessStatus": 204
-})
+//const cors = Cors({
+//	"origin": "https://localhost:3000",
+//	"methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+//	"preflightContinue": false,
+//	"optionsSuccessStatus": 204
+//})
 
 function runMiddleware(req, res, fn) {
 	return new Promise((resolve, reject) => {
