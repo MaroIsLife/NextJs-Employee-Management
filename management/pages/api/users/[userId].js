@@ -5,7 +5,7 @@ import Cors from 'cors'
 
 
 const cors = Cors({
-	"origin": "*",
+	"origin": "https://localhost:3000",
 	"methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
 	"preflightContinue": false,
 	"optionsSuccessStatus": 204
